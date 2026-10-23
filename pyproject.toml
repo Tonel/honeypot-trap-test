@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "honeypot-trap-test"
+version = "0.1.0"
+description = "Test site with 20 honeypot link traps and 5 controls, for checking link-visibility methods."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "playwright>=1.51",
+]
+
+[project.optional-dependencies]
+benchmark = [
+    "beautifulsoup4>=4.12",
+    "selenium>=4.20",
+    "requests>=2.31",
+]
+
+[tool.setuptools]
+# The project is a static site, not a Python package.
+packages = []
